@@ -7,7 +7,8 @@ import Video from '@components/sections/Video'
 import { Wedding } from '@models/wedding'
 import ImagesGallery from '@components/sections/ImagesGallery'
 import Intro from '@components/sections/Intro'
-import Invitation from './components/sections/Invitation'
+import Invitation from '@components/sections/Invitation'
+import Calendar from '@components/sections/Calendar'
 
 const cx = classNames.bind(styles)
 
@@ -65,6 +66,7 @@ function App() {
       />
       <Invitation message={wedding.message.invitation} />
       <ImagesGallery images={wedding.galleryImages} />
+      <Calendar date={wedding.date} />
     </div>
   )
 }
