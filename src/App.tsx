@@ -11,6 +11,7 @@ import Invitation from '@components/sections/Invitation'
 import Calendar from '@components/sections/Calendar'
 import Map from '@components/sections/Map'
 import Contact from '@components/sections/Contact'
+import Share from '@components/sections/Share'
 
 const cx = classNames.bind(styles)
 
@@ -71,6 +72,11 @@ function App() {
       <Calendar date={wedding.date} />
       <Map location={wedding.location} />
       <Contact groom={wedding.groom} bride={wedding.bride} />
+      <Share
+        groomName={wedding.groom.name}
+        brideName={wedding.bride.name}
+        date={wedding.date}
+      />
     </div>
   )
 }
