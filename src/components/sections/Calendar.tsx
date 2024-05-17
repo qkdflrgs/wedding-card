@@ -5,6 +5,7 @@ import { format, parseISO } from 'date-fns'
 import { ko } from 'date-fns/locale'
 import { DayPicker } from 'react-day-picker'
 import 'react-day-picker/dist/style.css'
+import { memo } from 'react'
 
 const cx = classNames.bind(styles)
 
@@ -62,4 +63,4 @@ function Calendar({ date }: CalendarProps) {
   )
 }
 
-export default Calendar
+export default memo(Calendar)
