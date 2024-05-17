@@ -1,6 +1,6 @@
 import { Wedding } from '@/models/wedding'
 import { useModalContext } from '@contexts/ModalContext'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface AttendCountModalProps {
   wedding: Wedding
@@ -51,7 +51,7 @@ function AttendCountModal({ wedding }: AttendCountModalProps) {
         close()
       },
     })
-  }, [])
+  }, [open, close, wedding, haveSeenModal])
 
   return null
 }
