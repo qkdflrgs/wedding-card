@@ -7,7 +7,7 @@ interface TextMessageProps {
 function TextMessage({ children }: TextMessageProps) {
   const message = children.split('\n').map((string, index, array) => {
     return (
-      <React.Fragment>
+      <React.Fragment key={index}>
         {string}
         {index === array.length - 1 ? null : <br />}
       </React.Fragment>
